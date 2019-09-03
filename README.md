@@ -13,19 +13,13 @@ Install tablef
 #### Linux
 
 ```bash
-$> curl -s https://api.github.com/repos/wlan0/tablef/releases/latest \
-	| jq -r ".assets[0].browser_download_url" \
-	| xargs wget -qO- \
-	| tar -xzf - releases/tablef-linux-amd64 --strip-components=1; echo "tablef installed to /usr/local/bin/tablef"; sudo ./tablef-linux-amd64
+$> curl -s https://api.github.com/repos/wlan0/tablef/releases/latest | jq -r ".assets[0].browser_download_url" | xargs wget -qO- | tar --strip-compenents=1 -xzf - releases/tablef-linux-amd64; echo "tablef installing to /usr/local/bin/tablef"; sudo mv ./tablef-linux-amd64 /usr/local/bin/tablef
 ```
 
 #### OSX
 
 ```bash
-$> curl -s https://api.github.com/repos/wlan0/tablef/releases/latest \
-	| jq -r ".assets[0].browser_download_url" \ 
-	| xargs wget -qO- \
-	| tar -xzf - releases/tablef-darwin-amd64 --strip-components=1; echo "tablef installed to /usr/local/bin/tablef"; sudo ./tablef-darwin-amd64
+$> curl -s https://api.github.com/repos/wlan0/tablef/releases/latest | jq -r ".assets[0].browser_download_url" | xargs wget -qO- | tar --strip-components=1 -xzf - releases/tablef-darwin-amd64; echo "tablef installing to /usr/local/bin/tablef"; sudo mv ./tablef-darwin-amd64 /usr/local/bin/tablef
 ```
 
 Use it
